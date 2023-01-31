@@ -24,13 +24,14 @@ public class SendItemToCart {
     public void selectMinQtyForItem(){
         try {
             WebElement dropdownElement = driver.findElement(By.xpath("//select[@id='quantity']"));
+            Assert.assertTrue(dropdownElement.isDisplayed());
             Select dropdown = new Select(dropdownElement);
             dropdown.selectByValue("1");
         }
         catch (Exception ignored){}
     }
 
-    public WebElement clickOnAddToCartBtn() throws InterruptedException {
+    public WebElement clickOnAddToCartBtn() {
 
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(3));
 
@@ -39,18 +40,20 @@ public class SendItemToCart {
             Iterator<String> it=handles.iterator();
             String parentWindowId = it.next();
             String childWindow =it.next();
-            System.out.println(driver.getTitle());
             driver.switchTo().window(childWindow);
-            System.out.println(driver.getTitle());
         }
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='add-to-cart-button']")));
+        By cartBtn = By.xpath("//input[@id='add-to-cart-button']");
+
+        Assert.assertTrue(driver.findElement(cartBtn).isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(cartBtn));
 
         return driver.findElement(By.xpath("//input[@id='add-to-cart-button']"));
     }
 
 
-    public WebElement goToCart() throws InterruptedException {
+    public WebElement goToCart() {
 
         WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(4));
 
@@ -62,12 +65,14 @@ public class SendItemToCart {
 
         try{
             wait.until(ExpectedConditions.visibilityOfElementLocated(cartPopUp));
+            Assert.assertTrue(driver.findElement(cartPopUp).isDisplayed());
             return driver.findElement(cartPopUp);
         }
         catch (Exception ignored){}
 
         try{
             wait.until(ExpectedConditions.visibilityOfElementLocated(installationPopUp));
+            Assert.assertTrue(driver.findElement(installationPopUp).isDisplayed());
             return driver.findElement(installationPopUp);
         }
         catch (Exception ignored){}

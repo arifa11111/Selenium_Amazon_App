@@ -1,14 +1,9 @@
 package com.selenium.amazonAssignment;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
-import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 
 public class TodaysDeal {
 
@@ -18,7 +13,11 @@ public class TodaysDeal {
     }
 
     public WebElement goToTodaysDeal(){
-        return driver.findElement(By.xpath("//a[text()=\"Today's Deals\"]"));
+        WebElement dealBtn = driver.findElement(By.xpath("//a[text()=\"Today's Deals\"]"));
+
+        Assert.assertTrue(dealBtn.isDisplayed());
+
+        return dealBtn;
     }
 
     public WebElement clickOnThirdItem(){
@@ -26,7 +25,6 @@ public class TodaysDeal {
     }
 
     public void clickOnAnyItem() throws InterruptedException, IOException {
-
         Thread.sleep(3000);
 
         try{

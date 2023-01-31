@@ -10,16 +10,12 @@ import java.io.IOException;
 public class Login {
 
     WebDriver driver;
-    String username;
-    String password;
 
-    public Login(WebDriver driver,String username,String password) {
+    public Login(WebDriver driver) {
         this.driver = driver;
-        this.username = username;
-        this.password = password;
     }
 
-    public void loginAmazonAccount() throws IOException {
+    public void loginAmazonAccount(String username,String password) throws IOException {
 
         driver.findElement(By.id("nav-link-accountList")).click();
 

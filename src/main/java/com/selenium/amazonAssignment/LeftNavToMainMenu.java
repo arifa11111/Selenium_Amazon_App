@@ -46,6 +46,10 @@ public class LeftNavToMainMenu {
 
         driver.findElement(mainMenu).click();
 
-        driver.findElement(By.xpath("//div[@class='nav-sprite hmenu-close-icon']")).click();
+        WebElement closeBtn = driver.findElement(By.xpath("//div[@class='nav-sprite hmenu-close-icon']"));
+
+        Assert.assertTrue(closeBtn.isDisplayed());
+
+        closeBtn.click();
     }
 }

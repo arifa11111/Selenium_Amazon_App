@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -17,8 +18,7 @@ public class Payment {
         this.driver = driver;
     }
 
-    public void paymentOptions(){
-
+    public void addPaymentOptions(){
         WebElement netBankingLocator = driver.findElement(By.cssSelector("select[name$='ppw-bankSelection_dropdown']"));
 
         Select select = new Select(netBankingLocator);
@@ -30,10 +30,12 @@ public class Payment {
         By addedBankLocator = By.cssSelector("#payment-information #spc_netbanking");
 
         WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(6));
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(addedBankLocator));
 
         String checkBank = driver.findElement(addedBankLocator).getText();
-        System.out.println(checkBank);
+
+        Assert.assertTrue(checkBank.contains("ICICI Bank"));
 
     }
 }

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -18,6 +19,8 @@ public class PrimeCheckBox {
     public WebElement checkPrimeBox(){
 
         By primeCheckBox = By.xpath("//i[@aria-label='Prime eligible']/ancestor::label/child::input");
+
+        Assert.assertTrue(driver.findElement(primeCheckBox).isDisplayed());
 
         return driver.findElement(primeCheckBox);
     }

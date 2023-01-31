@@ -49,7 +49,6 @@ public class TestBeforeLogin {
         Mobiles mobile = new Mobiles(driver);
         mobile.searchMobiles();
         mobile.getLastMobilesDetails();
-
     }
 
     @Test(priority = 5)

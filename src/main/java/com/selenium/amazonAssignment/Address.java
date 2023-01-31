@@ -50,7 +50,7 @@ public class Address {
         return driver.findElement(By.id("address-ui-widgets-form-submit-button"));
     }
 
-    public void checkAddressIsCorrect(){
+    public void isAddressCorrect(){
         WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(8));
 
         By addressLocator = By.cssSelector("div.displayAddressDiv ul");
