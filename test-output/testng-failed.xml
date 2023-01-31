@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="Arifa@786"/>
+  <parameter name="year" value="2021"/>
+  <parameter name="URL" value="https://www.amazon.in/"/>
+  <parameter name="username" value="shaikarifa.asha@gmail.com"/>
+  <listeners>
+    <listener class-name="com.selenium.amazonAssignment.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Amazon_Assigment_in_Selenium(failed)">
+    <classes>
+      <class name="com.selenium.TestBeforeLogin">
+        <methods>
+          <include name="Mobiles"/>
+          <include name="installation"/>
+          <include name="SendItemToCartWithMinQty"/>
+          <include name="navigateLeftNavToMainMenu"/>
+        </methods>
+      </class> <!-- com.selenium.TestBeforeLogin -->
+    </classes>
+  </test> <!-- Amazon_Assigment_in_Selenium(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

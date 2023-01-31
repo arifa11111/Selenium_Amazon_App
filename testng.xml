@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="com.selenium.amazonAssignment.Listeners"/>
+    </listeners>
+
+    <parameter name="URL" value="https://www.amazon.in/" />
+    <parameter name="username" value="shaikarifa.asha@gmail.com" />
+    <parameter name="password" value="Arifa@786" />
+    <parameter name="year" value="2021" />
+
+    <test verbose="2" preserve-order="true" name="Amazon_Assigment_in_Selenium">
+        <classes>
+           <class name="com.selenium.TestBeforeLogin"/>
+            <class name="com.selenium.TestAfterLogin"/>
+        </classes>
+    </test>
+</suite>
