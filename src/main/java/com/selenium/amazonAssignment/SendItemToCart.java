@@ -3,9 +3,7 @@ package com.selenium.amazonAssignment;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import java.time.Duration;
@@ -17,23 +15,29 @@ public class SendItemToCart {
 
     WebDriver driver;
 
+    By qtyLocator = By.xpath("//select[@id='quantity']");
+
+    By cartPopUp = By.id("attach-view-cart-button-form");
+
+    By directAddedToCart = By.xpath("//a[@href='/gp/cart/view.html?ref_=sw_gtc']");
+
+    By installationPopUp= By.cssSelector("button[data-action='a-popover-close']");
+
+    By cartBtn = By.xpath("//input[@id='add-to-cart-button']");
+
+
+
     public SendItemToCart(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void selectMinQtyForItem(){
-        try {
-            WebElement dropdownElement = driver.findElement(By.xpath("//select[@id='quantity']"));
-            Assert.assertTrue(dropdownElement.isDisplayed());
-            Select dropdown = new Select(dropdownElement);
-            dropdown.selectByValue("1");
-        }
-        catch (Exception ignored){}
+
+    public WebElement qtyDropdown(){
+        return driver.findElement(qtyLocator);
     }
 
-    public WebElement clickOnAddToCartBtn() {
 
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(3));
+    public WebElement addToCartBtn(){
 
         if(driver.getWindowHandles().size()>1) {
             Set<String> handles=driver.getWindowHandles();
@@ -43,25 +47,13 @@ public class SendItemToCart {
             driver.switchTo().window(childWindow);
         }
 
-        By cartBtn = By.xpath("//input[@id='add-to-cart-button']");
-
-        Assert.assertTrue(driver.findElement(cartBtn).isDisplayed());
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(cartBtn));
-
-        return driver.findElement(By.xpath("//input[@id='add-to-cart-button']"));
+        return driver.findElement(cartBtn);
     }
 
 
     public WebElement goToCart() {
 
-        WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(4));
-
-        By cartPopUp = By.id("attach-view-cart-button-form");
-
-        By directAddedToCart = By.xpath("//a[@href='/gp/cart/view.html?ref_=sw_gtc']");
-
-        By installationPopUp= By.cssSelector("button[data-action='a-popover-close']");
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 
         try{
             wait.until(ExpectedConditions.visibilityOfElementLocated(cartPopUp));
@@ -87,12 +79,4 @@ public class SendItemToCart {
         return null;
     }
 
-    public void checkQuantity() {
-        try {
-            WebElement qty = driver.findElement(By.xpath("//input[@name='quantityBox']"));
-
-            Assert.assertEquals(qty.getAttribute("value"), "1");
-        }
-        catch (Exception ignored){}
-    }
 }

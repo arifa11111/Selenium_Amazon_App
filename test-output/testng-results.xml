@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-31T13:59:35 IST" name="All Test Suite" finished-at="2023-01-31T14:00:26 IST" duration-ms="51449">
+  <suite started-at="2023-02-01T16:40:01 IST" name="All Test Suite" finished-at="2023-02-01T16:40:32 IST" duration-ms="30571">
     <groups>
     </groups>
-    <test started-at="2023-01-31T13:59:35 IST" name="Amazon_Assigment_in_Selenium" finished-at="2023-01-31T14:00:26 IST" duration-ms="51449">
-      <class name="com.selenium.TestAfterLogin">
-        <test-method is-config="true" signature="installation(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.selenium.TestAfterLogin@19d37183]" started-at="2023-01-31T13:59:35 IST" name="installation" finished-at="2023-01-31T13:59:43 IST" duration-ms="7649" status="PASS">
+    <test started-at="2023-02-01T16:40:01 IST" name="Amazon_Assigment_in_Selenium" finished-at="2023-02-01T16:40:32 IST" duration-ms="30571">
+      <class name="com.selenium.TestBeforeLogin">
+        <test-method is-config="true" signature="installation(java.lang.String)[pri:0, instance:com.selenium.TestBeforeLogin@3bd40a57]" started-at="2023-02-01T16:40:01 IST" name="installation" finished-at="2023-02-01T16:40:08 IST" duration-ms="6780" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[https://www.amazon.in/]]>
               </value>
             </param>
-            <param index="1">
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- installation -->
+        <test-method signature="goToTodaysDeal()[pri:1, instance:com.selenium.TestBeforeLogin@3bd40a57]" started-at="2023-02-01T16:40:08 IST" name="goToTodaysDeal" finished-at="2023-02-01T16:40:11 IST" duration-ms="2243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToTodaysDeal -->
+        <test-method signature="thirdItemInDeals()[pri:2, instance:com.selenium.TestBeforeLogin@3bd40a57]" started-at="2023-02-01T16:40:11 IST" name="thirdItemInDeals" finished-at="2023-02-01T16:40:20 IST" duration-ms="9601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- thirdItemInDeals -->
+        <test-method signature="SendItemToCartWithMinQty()[pri:3, instance:com.selenium.TestBeforeLogin@3bd40a57]" started-at="2023-02-01T16:40:20 IST" name="SendItemToCartWithMinQty" finished-at="2023-02-01T16:40:26 IST" duration-ms="6134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendItemToCartWithMinQty -->
+        <test-method signature="Mobiles(java.lang.String)[pri:4, instance:com.selenium.TestBeforeLogin@3bd40a57]" started-at="2023-02-01T16:40:26 IST" name="Mobiles" finished-at="2023-02-01T16:40:30 IST" duration-ms="3559" status="PASS">
+          <params>
+            <param index="0">
               <value>
-                <![CDATA[shaikarifa.asha@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Arifa@786]]>
+                <![CDATA[Mobiles]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- installation -->
-        <test-method signature="enablePrimeCheckBox()[pri:1, instance:com.selenium.TestAfterLogin@19d37183]" started-at="2023-01-31T13:59:43 IST" name="enablePrimeCheckBox" finished-at="2023-01-31T14:00:00 IST" duration-ms="17780" status="PASS">
+        </test-method> <!-- Mobiles -->
+        <test-method signature="navigateLeftNavToMainMenu()[pri:5, instance:com.selenium.TestBeforeLogin@3bd40a57]" started-at="2023-02-01T16:40:30 IST" name="navigateLeftNavToMainMenu" finished-at="2023-02-01T16:40:32 IST" duration-ms="2155" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enablePrimeCheckBox -->
-        <test-method signature="goToOrdersTab()[pri:2, instance:com.selenium.TestAfterLogin@19d37183]" started-at="2023-01-31T14:00:00 IST" name="goToOrdersTab" finished-at="2023-01-31T14:00:14 IST" duration-ms="13650" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToOrdersTab -->
-        <test-method signature="addingDeliveryAddress()[pri:3, instance:com.selenium.TestAfterLogin@19d37183]" started-at="2023-01-31T14:00:14 IST" name="addingDeliveryAddress" finished-at="2023-01-31T14:00:21 IST" duration-ms="7122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addingDeliveryAddress -->
-        <test-method signature="paymentOptions()[pri:4, instance:com.selenium.TestAfterLogin@19d37183]" started-at="2023-01-31T14:00:21 IST" name="paymentOptions" finished-at="2023-01-31T14:00:26 IST" duration-ms="5170" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paymentOptions -->
-      </class> <!-- com.selenium.TestAfterLogin -->
+        </test-method> <!-- navigateLeftNavToMainMenu -->
+      </class> <!-- com.selenium.TestBeforeLogin -->
     </test> <!-- Amazon_Assigment_in_Selenium -->
   </suite> <!-- All Test Suite -->
 </testng-results>

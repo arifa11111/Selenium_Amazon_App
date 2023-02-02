@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <parameter name="password" value="Arifa@786"/>
+  <parameter name="bank" value="ICICI Bank"/>
+  <parameter name="searchText" value="Mobiles"/>
   <parameter name="URL" value="https://www.amazon.in/"/>
   <parameter name="username" value="shaikarifa.asha@gmail.com"/>
   <listeners>
@@ -9,15 +11,15 @@
   </listeners>
   <test thread-count="5" name="Amazon_Assigment_in_Selenium(failed)">
     <classes>
-      <class name="com.selenium.TestBeforeLogin">
+      <class name="com.selenium.TestAfterLogin">
         <methods>
-          <include name="installation"/>
-          <include name="thirdItemInDeals"/>
-          <include name="goToTodaysDeal"/>
-          <include name="SendItemToCartWithMinQty"/>
-          <include name="navigateLeftNavToMainMenu"/>
+          <include name="addingDeliveryAddress"/>
+          <include name="paymentOptionsForOrderingItem"/>
+          <include name="enablePrimeCheckBox"/>
+          <include name="loginAmazon"/>
+          <include name="goToOrdersTab"/>
         </methods>
-      </class> <!-- com.selenium.TestBeforeLogin -->
+      </class> <!-- com.selenium.TestAfterLogin -->
     </classes>
   </test> <!-- Amazon_Assigment_in_Selenium(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

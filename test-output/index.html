@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +103,27 @@
                     <div class="method-list-content passed suite-All_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestAfterLogin" class="method navigator-link" hash-for-method="addingDeliveryAddress">addingDeliveryAddress</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestBeforeLogin" class="method navigator-link" hash-for-method="Mobiles(Mobiles)">Mobiles(Mobiles)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestAfterLogin" class="method navigator-link" hash-for-method="enablePrimeCheckBox">enablePrimeCheckBox</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestBeforeLogin" class="method navigator-link" hash-for-method="SendItemToCartWithMinQty">SendItemToCartWithMinQty</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestAfterLogin" class="method navigator-link" hash-for-method="goToOrdersTab">goToOrdersTab</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestBeforeLogin" class="method navigator-link" hash-for-method="goToTodaysDeal">goToTodaysDeal</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestAfterLogin" class="method navigator-link" hash-for-method="paymentOptions">paymentOptions</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestBeforeLogin" class="method navigator-link" hash-for-method="navigateLeftNavToMainMenu">navigateLeftNavToMainMenu</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.selenium.TestBeforeLogin" class="method navigator-link" hash-for-method="thirdItemInDeals">thirdItemInDeals</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Test_Suite -->
@@ -136,35 +141,43 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.selenium.TestAfterLogin</span>
+              <span class="class-name">com.selenium.TestBeforeLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addingDeliveryAddress">
-                  </a> <!-- addingDeliveryAddress -->
-                  <span class="method-name">addingDeliveryAddress</span>
+                  <a name="Mobiles(Mobiles)">
+                  </a> <!-- Mobiles(Mobiles) -->
+                  <span class="method-name">Mobiles</span>
+                  <span class="parameters">(Mobiles)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="enablePrimeCheckBox">
-                  </a> <!-- enablePrimeCheckBox -->
-                  <span class="method-name">enablePrimeCheckBox</span>
+                  <a name="SendItemToCartWithMinQty">
+                  </a> <!-- SendItemToCartWithMinQty -->
+                  <span class="method-name">SendItemToCartWithMinQty</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="goToOrdersTab">
-                  </a> <!-- goToOrdersTab -->
-                  <span class="method-name">goToOrdersTab</span>
+                  <a name="goToTodaysDeal">
+                  </a> <!-- goToTodaysDeal -->
+                  <span class="method-name">goToTodaysDeal</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="paymentOptions">
-                  </a> <!-- paymentOptions -->
-                  <span class="method-name">paymentOptions</span>
+                  <a name="navigateLeftNavToMainMenu">
+                  </a> <!-- navigateLeftNavToMainMenu -->
+                  <span class="method-name">navigateLeftNavToMainMenu</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="thirdItemInDeals">
+                  </a> <!-- thirdItemInDeals -->
+                  <span class="method-name">thirdItemInDeals</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -180,6 +193,8 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;All Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;password&quot; value=&quot;Arifa@786&quot;/&gt;
+  &lt;parameter name=&quot;bank&quot; value=&quot;ICICI Bank&quot;/&gt;
+  &lt;parameter name=&quot;searchText&quot; value=&quot;Mobiles&quot;/&gt;
   &lt;parameter name=&quot;URL&quot; value=&quot;https://www.amazon.in/&quot;/&gt;
   &lt;parameter name=&quot;username&quot; value=&quot;shaikarifa.asha@gmail.com&quot;/&gt;
   &lt;listeners&gt;
@@ -187,7 +202,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Amazon_Assigment_in_Selenium&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.selenium.TestAfterLogin&quot;/&gt;
+      &lt;class name=&quot;com.selenium.TestBeforeLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Amazon_Assigment_in_Selenium --&gt;
 &lt;/suite&gt; &lt;!-- All Test Suite --&gt;
@@ -227,28 +242,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'enablePrimeCheckBox')
-data.setCell(0, 2, 'com.selenium.TestAfterLogin')
-data.setCell(0, 3, 17780);
+data.setCell(0, 1, 'thirdItemInDeals')
+data.setCell(0, 2, 'com.selenium.TestBeforeLogin')
+data.setCell(0, 3, 9601);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'goToOrdersTab')
-data.setCell(1, 2, 'com.selenium.TestAfterLogin')
-data.setCell(1, 3, 13650);
+data.setCell(1, 1, 'SendItemToCartWithMinQty')
+data.setCell(1, 2, 'com.selenium.TestBeforeLogin')
+data.setCell(1, 3, 6134);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addingDeliveryAddress')
-data.setCell(2, 2, 'com.selenium.TestAfterLogin')
-data.setCell(2, 3, 7122);
+data.setCell(2, 1, 'Mobiles')
+data.setCell(2, 2, 'com.selenium.TestBeforeLogin')
+data.setCell(2, 3, 3559);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'paymentOptions')
-data.setCell(3, 2, 'com.selenium.TestAfterLogin')
-data.setCell(3, 3, 5170);
+data.setCell(3, 1, 'goToTodaysDeal')
+data.setCell(3, 2, 'com.selenium.TestBeforeLogin')
+data.setCell(3, 3, 2243);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'navigateLeftNavToMainMenu')
+data.setCell(4, 2, 'com.selenium.TestBeforeLogin')
+data.setCell(4, 3, 2155);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -274,26 +293,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.selenium.TestAfterLogin</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.selenium.TestBeforeLogin</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">installation(https://www.amazon.in/, shaikarifa.asha@gmail.com, Arifa@786)</span>
+                <span class="method-name">installation(https://www.amazon.in/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">enablePrimeCheckBox</span>
-                <span class="method-start">7688 ms</span>
+                <span class="method-name">goToTodaysDeal</span>
+                <span class="method-start">6830 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">goToOrdersTab</span>
-                <span class="method-start">25478 ms</span>
+                <span class="method-name">thirdItemInDeals</span>
+                <span class="method-start">9081 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">addingDeliveryAddress</span>
-                <span class="method-start">39129 ms</span>
+                <span class="method-name">SendItemToCartWithMinQty</span>
+                <span class="method-start">18685 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">paymentOptions</span>
-                <span class="method-start">46253 ms</span>
+                <span class="method-name">Mobiles(Mobiles)</span>
+                <span class="method-start">24821 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">navigateLeftNavToMainMenu</span>
+                <span class="method-start">28383 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -3,66 +3,43 @@ package com.selenium.amazonAssignment;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
-import java.util.Properties;
 
 public class Address {
 
     WebDriver driver;
 
-    Properties prop = new Properties();
-    FileInputStream fis;
+    By addressFormLocator = By.xpath("//div[@class='a-input-text-group a-spacing-medium a-spacing-top-medium']//input");
+
+
+    By newDeliveryAddressBtn = By.id("add-new-address-popover-link");
+
+    By submitBtn = By.id("address-ui-widgets-form-submit-button");
+
+    By addedAddressDetails = By.cssSelector("div.displayAddressDiv ul li:first-child");
+
 
     public Address(WebDriver driver) {
         this.driver = driver;
     }
 
-    public WebElement addNewDeliveryAddress() throws IOException {
-
-        try {
-            fis = new FileInputStream("/home/shaiA/Desktop/Amazon_Assigment_Selenium/src/main/resources/data.properties");
-            prop.load(fis);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-        driver.findElement(By.id("add-new-address-popover-link")).click();
-
-        By addressFormLocator = By.xpath("//div[@class='a-input-text-group a-spacing-medium a-spacing-top-medium']//input");
-
-        List<WebElement> formFields = driver.findElements(addressFormLocator);
-
-        for(int i=0;i<formFields.size()-1;i++){
-            formFields.get(i).sendKeys(prop.getProperty("field."+i));
-            Screenshots ss = new Screenshots(driver,"address"+i);
-            ss.fullScreenCapture();
-        }
-
-        return driver.findElement(By.id("address-ui-widgets-form-submit-button"));
+    public WebElement addNewAddressBtn(){
+        return  driver.findElement(newDeliveryAddressBtn);
     }
 
-    public void isAddressCorrect(){
-        WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(8));
 
-        By addressLocator = By.cssSelector("div.displayAddressDiv ul");
+    public List<WebElement> deliveryAddressForm(){
+        return driver.findElements(addressFormLocator);
+    }
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(addressLocator));
 
-        driver.findElement(addressLocator).isDisplayed();
+    public WebElement submitDeliveryAddressForm(){
+        return driver.findElement(submitBtn);
+    }
 
-        String name = driver.findElement(By.cssSelector("div.displayAddressDiv ul li:first-child")).getText();
-
-        Assert.assertEquals(name,prop.getProperty("field.0"));
-
+    public WebElement addedNameInAddressForm(){
+        return driver.findElement(addedAddressDetails);
     }
 
 }
