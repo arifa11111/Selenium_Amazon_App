@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="6">
+    <listeners>
+        <listener class-name="AdvancedSelenium.ExtentReporterNG" />
+    </listeners>
+
+    <parameter name="url" value="https://rahulshettyacademy.com/"></parameter>
+    <test verbose="2" preserve-order="true" name="Engeneering department">
+        <classes>
+            <class name="TestNG.EnggDept">
+<!--                <methods>-->
+<!--                    <exclude name="end"/>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="QA department">
+        <classes>
+            <class name="TestNG.QADept">
+<!--                <methods>-->
+<!--                    <include name="e.*"/>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>
